@@ -1,0 +1,81 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Debug",
+			"type": "pwa-node",
+			"request": "launch",
+			"restart": true,
+			"runtimeExecutable": "${workspaceFolder}/node_modules/.bin/ts-node-dev",
+			"cwd": "${workspaceFolder}",
+			// "console": "integratedTerminal",
+			"console": "internalConsole",
+			"outputCapture": "std",
+			"internalConsoleOptions": "openOnSessionStart",
+			"args": [
+				"--experimental-specifier-resolution=node",
+				"--experimental-modules",
+				"--trace-warnings",
+				"--inspect",
+				"--respawn",
+				"--no-notify",
+				"--require",
+				"tsconfig-paths/register",
+				"--transpile-only",
+				// "--debug",
+				"--clear",
+				"--", // entrypoint
+				"./src/main.ts",
+				// app arguments
+				"--quiet",
+				"--init"
+			],
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"sourceMaps": true,
+			"smartStep": true,
+			"resolveSourceMapLocations": [
+				"${workspaceFolder}/**",
+				"!**/node_modules/**"
+			]
+		},
+		{
+			"name": "Debug (node-ts)",
+			"type": "pwa-node",
+			"request": "launch",
+			"runtimeExecutable": "node",
+			"runtimeArgs": [
+				"--experimental-specifier-resolution=node",
+				"--experimental-modules",
+				"--loader",
+				"ts-node/esm",
+				// "--nolazy",
+				// "-r",
+				// "ts-node/register/transpile-only"
+			],
+			"args": [
+				"--",
+				"src/main.ts",
+				"--init",
+			],
+			"cwd": "${workspaceRoot}",
+			"console": "internalConsole",
+			"outputCapture": "std",
+			"internalConsoleOptions": "openOnSessionStart",
+			"skipFiles": [
+				"<node_internals>/**",
+				"node_modules/**"
+			],
+			"sourceMaps": true,
+			"smartStep": true,
+			"resolveSourceMapLocations": [
+				"${workspaceFolder}/**",
+				"!**/node_modules/**"
+			]
+		}
+	]
+}

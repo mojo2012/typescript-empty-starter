@@ -1,0 +1,169 @@
+{
+	"env": {
+		"browser": true,
+		"es2020": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:prettier/recommended",
+		"prettier",
+		"prettier/@typescript-eslint"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaVersion": 2020,
+		"sourceType": "module"
+	},
+	"plugins": [
+		"@typescript-eslint",
+		"prettier"
+	],
+	"overrides": [
+		{
+			"files": [
+				"*.json"
+			],
+			"rules": {
+				"prettier/prettier": [
+					"warn",
+					{
+						"tabWidth": 1,
+						"useTabs": true,
+						"usePrettierrc": false,
+						"singleQuote": false,
+						"parser": "json",
+						"semi": false,
+						"trailingComma": "none",
+						"bracketSpacing": true,
+						"arrowParens": "always",
+						"printWidth": 1000
+					}
+				],
+				"no-multiple-empty-lines": [
+					"warn",
+					{
+						"max": 0,
+						"maxEOF": 0,
+						"maxBOF": 0
+					}
+				],
+				"sort-keys": "warn",
+				"max-len": [
+					"warn",
+					{
+						"code": 1000
+					}
+				]
+			}
+		}
+	],
+	"rules": {
+		"max-len": [
+			"warn",
+			{
+				"code": 160
+			}
+		],
+		"no-mixed-spaces-and-tabs": "warn",
+		"indent": [
+			"error",
+			"tab"
+		],
+		"linebreak-style": [
+			"error",
+			"unix"
+		],
+		"quotes": [
+			"error",
+			"double"
+		],
+		"semi": [
+			"error",
+			"never"
+		],
+		"camelcase": [
+			"error",
+			{
+				"properties": "always"
+			}
+		],
+		"comma-spacing": [
+			"warn",
+			{
+				"before": false,
+				"after": true
+			}
+		],
+		"comma-style": [
+			"warn",
+			"last"
+		],
+		"brace-style": [
+			"warn",
+			"1tbs"
+		],
+		"block-spacing": [
+			"warn",
+			"always"
+		],
+		"max-classes-per-file": [
+			"error",
+			1
+		],
+		"getter-return": [
+			"error"
+		],
+		"@typescript-eslint/explicit-member-accessibility": [
+			"error"
+		],
+		"no-eq-null": [
+			"warn"
+		],
+		"no-undefined": [
+			"error"
+		],
+		"no-use-before-define": "error",
+		"max-statements-per-line": [
+			"warn",
+			{
+				"max": 1
+			}
+		],
+		"no-multiple-empty-lines": [
+			"warn",
+			{
+				"max": 1,
+				"maxEOF": 1,
+				"maxBOF": 0
+			}
+		],
+		"array-bracket-spacing": [
+			"warn",
+			"never"
+		],
+		"class-methods-use-this": "warn",
+		"newline-before-return": "error",
+		// "newline-per-chained-call": [
+		// 	"warn",
+		// 	{
+		// 		"ignoreChainWithDepth": 1
+		// 	}
+		// ],
+		"prettier/prettier": [
+			"warn",
+			{
+				"tabWidth": 1,
+				"useTabs": true,
+				"usePrettierrc": false,
+				"singleQuote": false,
+				"parser": "typescript",
+				"semi": false,
+				"trailingComma": "none",
+				"bracketSpacing": true,
+				"arrowParens": "always",
+				"printWidth": 160
+			}
+		]
+	}
+}

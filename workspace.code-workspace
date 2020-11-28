@@ -1,0 +1,46 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"extensions": {
+		"recommendations": [
+			"dbaeumer.vscode-eslint",
+			"EditorConfig.EditorConfig",
+			"mikehanson.auto-barrel",
+			"ms-vscode.node-debug",
+			"ms-vscode.node-debug2",
+			"msjsdiag.debugger-for-chrome",
+			"firefox-devtools.vscode-firefox-debug",
+		]
+	},
+	"settings": {
+		"javascript.implicitProjectConfig.experimentalDecorators": true,
+		"javascript.implicitProjectConfig.checkJs": true,
+		"javascript.referencesCodeLens.enabled": true,
+		"javascript.referencesCodeLens.showOnAllFunctions": true,
+		"javascript.suggest.completeFunctionCalls": true,
+		"typescript.format.enable": true,
+		"javascript.format.semicolons": "remove",
+		"typescript.format.semicolons": "remove",
+		"typescript.implementationsCodeLens.enabled": true,
+		"typescript.suggest.completeFunctionCalls": true,
+		"eslint.format.enable": true,
+		"[typescript]": {
+			"editor.codeActionsOnSave": {
+				"source.organizeImports": true,
+				"source.fixAll": true,
+			},
+			"editor.defaultFormatter": "dbaeumer.vscode-eslint",
+		},
+		"editor.codeActionsOnSave": {
+			"source.fixAll": true,
+			"source.organizeImports": true,
+		},
+		"eslint.run": "onSave",
+		"eslint.codeAction.showDocumentation": {
+			"enable": true
+		},
+	}
+}
